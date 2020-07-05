@@ -31,4 +31,7 @@ public class Account extends AbstractBaseModel {
             @OrderBy("id DESC")
     List<Transaction> transactionList = new ArrayList<>();
 
+    @Version
+    Long version;
+
 }

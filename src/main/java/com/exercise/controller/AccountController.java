@@ -33,4 +33,9 @@ public class AccountController {
         return ResponseEntity.ok(this.accountService.saveTransaction(accountId, requestTransaction));
     }
 
+    @GetMapping("account/{accountId}/balance")
+    public ResponseEntity<?> getAccountBalance(@PathVariable Long accountId) {
+        return ResponseEntity.ok(this.accountService.getAccountBalace(accountId));
+    }
+
 }

@@ -15,4 +15,6 @@ public interface AccountService {
 
     Transaction saveTransaction(Long accountId, TransactionRequestDTO request);
 
+    BigDecimal getAccountBalace(Long accountId);
+
 }
