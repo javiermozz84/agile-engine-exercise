@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountService} from "../service/account.service";
 
 @Component({
   selector: 'app-table-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableListComponent implements OnInit {
 
-  constructor() { }
+    account: Account;
+
+  constructor(public accountService: AccountService) { }
 
   ngOnInit() {
+      this.accountService.getAccountByUserId(1).then( account => {
+          this.account = account;
+      })
   }
 
 }

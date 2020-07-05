@@ -16,6 +16,7 @@ import {
     MatTableModule,
     MatDialogModule
 } from '@angular/material';
+import {AccountService} from "../../service/account.service";
 
 @NgModule({
     imports: [
@@ -33,7 +34,7 @@ import {
         MatDialogModule,
         HttpClientModule
     ],
-    providers: [
+    providers: [AccountService
     ],
     entryComponents: [ ],
     declarations: [

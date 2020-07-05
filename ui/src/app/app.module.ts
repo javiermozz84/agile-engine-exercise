@@ -13,6 +13,7 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {AccountService} from "./service/account.service";
 
 @NgModule({
   imports: [
@@ -32,7 +33,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AdminLayoutComponent,
 
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
