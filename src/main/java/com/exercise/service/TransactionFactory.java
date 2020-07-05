@@ -15,7 +15,7 @@ public class TransactionFactory {
             case CREDIT:
                 return new CreditTransactionServiceImpl();
             default:
-                throw new TransactionException("Not supported transaction type, only should be CREDIT or DEBIT.");
+                throw new TransactionException("Not supported transaction type, should be CREDIT or DEBIT.");
         }
     }
 }

@@ -16,14 +16,10 @@ public class DebitTransactionServiceImpl implements TransactionTypeService {
 
     @Override
     public Transaction getTransaction(TransactionRequestDTO request, Account account) {
-
         this.validate(request, account);
-
         Transaction transaction = new Transaction(request.getAmount(), request.getType(), "Debit request transaction", account);
-
         account.setAmount(account.getAmount().add(request.getAmount()));
         account.getTransactionList().add(transaction);
-
         return transaction;
     }
 

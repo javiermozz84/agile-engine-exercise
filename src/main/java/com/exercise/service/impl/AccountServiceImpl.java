@@ -44,7 +44,7 @@ public class AccountServiceImpl implements AccountService {
     public Transaction saveTransaction(Long accountId, TransactionRequestDTO request) {
         Account account = getAccount(accountId);
         Transaction transaction = transactionFactory.create(request.getType()).getTransaction(request, account);
-        transactionRepository.save( transaction );
+        transactionRepository.saveAndFlush( transaction );
         accountRepository.save( account );
         return transaction;
     }
